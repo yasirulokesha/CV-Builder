@@ -1,10 +1,10 @@
 import { createContext, useContext, useState } from "react";
 
-export const Data = createContext("knsdoc");
+export const Data = createContext();
 
 export function DataWrapContext({children}) {
     const [data, setData] = useState({
-        name: "dadsad",
+        name: "Bla bla",
         fullName: "da",
         dob: "das",
         nic: "da"

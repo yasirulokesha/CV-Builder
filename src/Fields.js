@@ -1,14 +1,12 @@
-import { createContext, useContext } from "react";
-import { Data, UseData } from "./Store";
-// import { Data } from "./Store";
-// import { DataWrap } from './Store';
+import { UseData } from "./Store";
 
 export function FullName() {
-    const [data, setData] = UseData()
+    const data = UseData()
     return (
         <form onSubmit={(event) => { event.preventDefault() }}>
             <label>Name</label>
-            <input type="text" value={data.name}  placeholder="John Jonathan" name="name"></input>
+            <input type="text" value={data.name} placeholder="John Jonathan" name="name"></input>
+            {console.log(data)}
         </form>
     )
 }
