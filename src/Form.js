@@ -1,15 +1,14 @@
 import React, { useContext } from 'react'
 import { FullName } from './Fields'
-import { Data, DataWrapContext, UseData } from './Store'
+import { Data, DataWrapContext, UseData } from './API'
 
 export default function Form() {
-    const data_ = useContext(Data)
+    const {data} = UseData()
+
     return (
-        <div>
-            <DataWrapContext>
-                <FullName />
-            </DataWrapContext>
-            {data_}
+        <div className='form_'>
+            <FullName />
+            {data.name}
         </div>
     )
 }

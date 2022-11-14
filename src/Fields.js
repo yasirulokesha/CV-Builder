@@ -1,4 +1,4 @@
-import { UseData } from "./Store";
+import { UseData } from "./API";
 
 export function FullName() {
     const {data , setData} = UseData()
@@ -6,6 +6,7 @@ export function FullName() {
         <form onSubmit={(event) => { event.preventDefault() }}>
             <label>Name</label>
             <input type="text" value={data.name} onChange={(event) =>{setData({...data,name: event.target.value})} } placeholder="John Jonathan" name="name"></input>
+            <button type="submit">Next</button>
         </form>
     )
 }

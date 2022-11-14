@@ -1,10 +1,13 @@
 import './App.css';
 import Form from './Form';
+import { DataWrapContext } from './API'
 
 function App() {
   return (
     <div className='container'>
-      <Form/>
+      <DataWrapContext>
+        <Form />
+      </DataWrapContext>
     </div>
   );
 }
