@@ -4,18 +4,17 @@ export const Data = createContext();
 
 export function DataWrapContext({children}) {
     const [data, setData] = useState({
-        name: "Bla bla",
-        fullName: "da",
-        dob: "das",
-        nic: "da"
+        name: "",
+        fullName: "",
+        dob: "",
+        nic: ""
     });
 
     return(
-        <Data.Provider value={data}>
+        <Data.Provider value={{data, setData}} >
             {children}
         </Data.Provider>
     )
 }
 
-export const UseData = () => useContext(Data) 
-
+export const UseData = () => useContext(Data)
